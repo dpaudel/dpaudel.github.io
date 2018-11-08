@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Surveying the genome and constructing a high-density genetic map of napiergrass ( _Cenchrus purpureus_ Schumach)
+title: Surveying the genome and constructing a high-density genetic map of napiergrass (Cenchrus purpureus Schumach)
 subtitle: Dev Paudel, Baskaran Kannan, Xiping Yang, Karen Harris-Shultz, Mahendar Thudi, Rajeev K. Varshney, Fredy Altpeter & Jianping Wang
 image: /img/napiergrass.jpg
 ---
