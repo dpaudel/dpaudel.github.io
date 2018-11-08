@@ -1,23 +1,8 @@
 ---
 layout: page
-title: About me
-subtitle: Dev Paudel
+title: Dev Paudel
+subtitle: PhD Candidate, University of Florida
 ---
+I am currently a PhD candidate in [Agronomy Department](http://agronomy.ifas.ufl.edu/) at the [University of Florida](http://www.ufl.edu/). I am interested in bioinformatics and plant breeding.
 
-
-
-  <!-- Twitter summary cards -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@" />
-  <meta name="twitter:creator" content="@" />
-
-  
-  <meta name="twitter:title" content="Dev Paudel" />
-  
-
-  
-  <meta name="twitter:description" content="PhD Candidate, University of Florida">
-  
-
-  
-  <meta name="twitter:image" content="http://rbiology.github.io/img/dev_twittersquare.png" />
+<a class="twitter-timeline" data-width="420" href="https://twitter.com/devRpaudel?ref_src=twsrc%5Etfw">Tweets by devRpaudel</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
