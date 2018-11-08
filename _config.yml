@@ -25,6 +25,7 @@ navbar-links:
   About Me: "aboutme"
   Publications: "publications"
   Resources:
+    - Learn R: "https://rbiology.github.io"
     - University of Florida: "http://www.ufl.edu/"
     - Wang's Lab: "http://www.wanglabuf.com/"
     - Plant Science Council: "https://www.ufplants.org/"
