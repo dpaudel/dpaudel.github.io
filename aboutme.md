@@ -1,16 +1,23 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Dev Paudel
 ---
 
-My name is Inigo Montoya. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
 
-What else do you need?
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
 
-### my history
+  
+  <meta name="twitter:title" content="Dev Paudel" />
+  
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+  
+  <meta name="twitter:description" content="PhD Candidate, University of Florida">
+  
+
+  
+  <meta name="twitter:image" content="http://rbiology.github.io/img/dev_twittersquare.png" />
