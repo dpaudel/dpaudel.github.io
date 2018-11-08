@@ -1,73 +1,9 @@
 ---
 layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
+title: Evaluation of cotton fiber maturity measurements
+subtitle: Dev R.Paudel, Eric F.Hequet, Noureddine Abidi
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
 ---
-
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
-
-**Here is some bold text**
-
-## Here is a secondary heading
-
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
+Cotton fiber maturity, degree of secondary cell wall thickening relative to the perimeter, is one of the most important fiber quality and processing parameters of cotton. Immature fibers result in low dye uptake, increased fiber breakage, fabric defects, and waste. Because of that, breeders, cotton producers, spinners, and textile manufacturers desire cotton lint that is mature. However, fast and reliable methods to quantify maturity that fit into the current breeding and marketing systems are not available. The reference method to measure fiber maturity is the cross-section method, where 1 μm thick fiber cross-sections are evaluated under a microscope. It is time consuming, tedious, and impractical for high volume measurement of fiber maturity. Interest is rising toward rapid routine instruments to measure fiber maturity such as the Advanced Fiber Information System (AFIS) and the cottonscope. The AFIS instrument individualizes and presents individual fibers to electro-optical sensors in order to measure fiber maturity while the cottonscope uses polarized light microscopy and image analysis to measure the maturity of fiber snippets. 104 reference cotton samples were tested with these three methods to assess the potential of these maturity measurements. Both AFIS and cottonscope maturity measurements show good correlations with the reference method. At this stage of our investigations it appears that the cottonscope may be faster than the AFIS and that its dynamic range is similar to that of the reference method. Both AFIS and cottonscope require a very small sample size (500 mg for AFIS and 50 mg for cottonscope). Therefore, both can be used in various cases where we only have access to a small sample (single boll sample for example). Nevertheless, obtaining a representative sample of the lint to be tested could be challenging.
