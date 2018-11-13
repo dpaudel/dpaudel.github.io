@@ -13,14 +13,6 @@
 12.	**Paudel, D.**, Hequet, E. F., & Abidi, N. (2013). Evaluation of cotton fiber maturity measurements. Industrial Crops and Products, 45, 435–441.
 
 
-
-#### In-preparation:
-1.	**Paudel, D.**, B. Kannan, F. Altpeter, J. Wang. Mapping QTLs controlling yield, yield components, and morphological traits in napiergrass. 
-2.	**Paudel, D.**, X. Yang, B. Kannan, F. Altpeter, J. Wang. Evaluating the genetic background of flowering time in a napiergrass germplasm collection.
-3.	**Paudel, D.**, L. Tan, L. Wang, S. Maya, F. Liu, L. Liu, Z. Peng, M. Crook, J-M Ane, J. Wang.  Isolation, characterization, and complete genome sequence of Bradyrhizobium strain Lb8 from peanut nodules.
-
-
-
 #### Conference and Workshop Talks
 1.	**Paudel, D.**, B. Kannan, F. Altpeter, J. Wang. 2018. Utilizing cytoplasmic male sterility and interspecific hybridization to reduce invasiveness of elephant grass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
 2.	**Paudel, D.**, B. Kannan, F. Altpeter, J. Wang. 2017. Constructing high density genetic map of napiergrass (Cenchrus purpureus). ASA-CSSA-SSSA Annual Meeting, Tampa, Florida.
