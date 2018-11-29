@@ -2,8 +2,6 @@
 layout: post
 title: Evaluation of cotton fiber maturity measurements
 subtitle: Dev R.Paudel, Eric F.Hequet, Noureddine Abidi
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
 tags: [cotton, maturity, cottonscope, AFIS]
 image: /img/cotton.jpg
 ---
