@@ -11,3 +11,5 @@ Cotton fiber maturity, degree of secondary cell wall thickening relative to the 
 [Click here to read the full article](https://www.sciencedirect.com/science/article/pii/S0926669013000095)
 
 Please email dpaudel at outlook dot com if you do not have access to the paper.
+
+ /img/cotton.jpg
