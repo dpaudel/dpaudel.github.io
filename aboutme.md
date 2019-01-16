@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dev Paudel
-subtitle: PhD Candidate, University of Florida
+subtitle: University of Florida
 ---
 I completed my PhD in [Agronomy](http://agronomy.ifas.ufl.edu/) from the [University of Florida](http://www.ufl.edu/). I am interested in bioinformatics and plant breeding.
 
