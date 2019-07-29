@@ -306,10 +306,10 @@ footer .theme-by {
     padding: 50px 0;
   }
   footer .footer-links {
-    font-size: 18px;
+    font-size: 14px;
   }
   footer .copyright {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -342,7 +342,7 @@ footer .theme-by {
 }
 
 .post-preview .post-title {
-  font-size: 30px;
+  font-size: 18px;
   margin-top: 0;
 }
 .post-preview .post-subtitle {
