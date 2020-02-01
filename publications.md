@@ -1,4 +1,5 @@
-#### Peer-reviewed Journal Articles (\*undergraduate student under my supervision):
+#### Peer-reviewed Journal Articles:
+(\*undergraduate student under my supervision)
 
 1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S*, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. Frontiers in Microbiology.
 2.	Yang X, Song J, Todd J, Peng Z, **Paudel DR**, Luo Z, Ma X, You Q, Hanson E, Zhao Z, Zhao Y, Zhang J, Ming R, Wang J. 2019. Target enrichment sequencing of 307 germplasm accessions identified ancestry of ancient and modern hybrids and signatures of adaptation and selection in sugarcane (Saccharum spp.), a “sweet” crop with “bitter” genomes. Plant Biotechnology Journal: 1–11.
