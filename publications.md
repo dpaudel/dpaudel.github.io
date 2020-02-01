@@ -1,5 +1,4 @@
 #### Peer-reviewed Journal Articles:
-(\*undergraduate student under my supervision)
 
 1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S*, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. Frontiers in Microbiology.
 2.	Yang X, Song J, Todd J, Peng Z, **Paudel DR**, Luo Z, Ma X, You Q, Hanson E, Zhao Z, Zhao Y, Zhang J, Ming R, Wang J. 2019. Target enrichment sequencing of 307 germplasm accessions identified ancestry of ancient and modern hybrids and signatures of adaptation and selection in sugarcane (Saccharum spp.), a “sweet” crop with “bitter” genomes. Plant Biotechnology Journal: 1–11.
@@ -48,3 +47,5 @@
 8.	Kelly B, Manandhar R, Hosseinali F, **Paudel D**, Abidi N, Hequet EF. 2012. Decoding distributional changes in fiber quality during consecutive stages of processing. Beltwide Cotton Conference.
 9.	Manandhar R, Kelly B, Hosseinali F, **Paudel D**, Abidi N, Hequet EF. 2012. Relationship between individual fiber length and linear density within-sample. Beltwide Cotton Conference.
 10.	**Paudel D**, Kelly B, Manandhar R, Hosseinali F, Abidi N, Hequet EF. 2012. Assessing rapid measurements of the secondary cell wall development of cotton fibers. Second Annual Agricultural Consortium of Texas Research Symposium.
+
+(\*undergraduate student under my supervision)
