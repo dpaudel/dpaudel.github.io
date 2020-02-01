@@ -20,17 +20,17 @@
 
 #### Extension Publications: 
 
-1.	**Paudel D**. 2017. Rbiology: R tutorials for biologists. Available from: rbiology.github.io
+1.	**Paudel D**. 2017. Rbiology: R tutorials for biologists. Available from: [rbiology.github.io](https://rbiology.github.io/)
 2.	**Paudel D**. 2010. Cultivation practice of Oyster Mushroom (Booklet - in Nepali). 2010. Youth Action Fund, Open Society Institute - Budapest.
 3.	**Paudel D**. 2009. Urban farming for food security. Agri-Transformation. Year 1. Volume 1. Hitkari Samiti. Rampur Campus. Nepal.
 4.	**Paudel D**. 2008. Azolla – a boon for farmers (In Nepali). Krishi Sandesh. Post Graduate Society, IAAS, Rampur, Nepal.
 
 #### Conference and Workshop Talks:
 
-1.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2019. Breeding, genetics, and genomics of napiergrass (elephant grass, Cenchrus purpureus). NSA-UF Talk Series, University of Florida.
-2.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2018. Utilizing cytoplasmic male sterility and interspecific hybridization to reduce invasiveness of elephant grass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
-3.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2017a. First genetic linkage map of napiergrass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
-4.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2017b. Constructing high density genetic map of napiergrass (Cenchrus purpureus). ASA-CSSA-SSSA Annual Meeting.
+1.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2019. Breeding, genetics, and genomics of napiergrass (elephant grass, *Cenchrus purpureus*). NSA-UF Talk Series, University of Florida.
+2.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2018. Utilizing cytoplasmic male sterility and interspecific hybridization to reduce invasiveness of elephant grass (*Cenchrus purpureus*). Agronomy Graduate Research Symposium, University of Florida.
+3.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2017a. First genetic linkage map of napiergrass (*Cenchrus purpureus*). Agronomy Graduate Research Symposium, University of Florida.
+4.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2017b. Constructing high density genetic map of napiergrass (*Cenchrus purpureus*). ASA-CSSA-SSSA Annual Meeting.
 5.	**Paudel D**, Kelly B, Manandhar R, Hosseinali F, Abidi N, Hequet EF. 2012a. Evaluation of various measurements for assessing maturity of cotton fibers. Annual Biological Sciences Symposium, Texas Tech University.
 6.	**Paudel D**, Kelly B, Manandhar R, Hosseinali F, Abidi N, Hequet EF. 2012b. Quantifying sample size requirements for AFIS Short Fiber Content measurements. Beltwide Cotton Conference.
 7.	**Paudel D**, Timsina K. 2009. Utilizing azolla as an economical and sustainable feed to poultry. Global Future Institute Research Highlights, Rampur, Nepal.
@@ -39,8 +39,8 @@
 
 1.	**Paudel D**, Dareus R, Rios E. 2020. Genome wide association study reveals candidate genes for flowering time in cowpea. Plant Science Symposium, University of Florida.
 2.	**Paudel D**, de Bem Oliveira I, Kenworthy KE, Unruh B, Meeks M, Milla-Lewis SR, Wu Y, Schwartz BM, Zhang J, Munoz PR, Rios E. 2019. Multi-environment evaluation of turfgrass species for turf quality in drought. ASA, CSSA and SSSA International Annual Meetings.
-3.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2018. Constructing a high-density genetic map of napiergrass (Cenchrus purpureus Schumach). Frontiers in Genetic Evaluation, Corteva Agriscience.
-4.	Maya S\*, **Paudel D**, Wang J. 2017. Sequencing and annotating a Bradyrhizobium strain, Lb8. Undergraduate Research Symposium, University of Florida.
+3.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2018. Constructing a high-density genetic map of napiergrass (*Cenchrus purpureus* Schumach). Frontiers in Genetic Evaluation, Corteva Agriscience.
+4.	Maya S\*, **Paudel D**, Wang J. 2017. Sequencing and annotating a *Bradyrhizobium* strain, Lb8. Undergraduate Research Symposium, University of Florida.
 5.	**Paudel D**, Kannan B, Wang J, Altpeter F. 2016. Developing marker assisted breeding resources in napiergrass and interspecific hybridization with pearl millet for improved biomass production and biosafety. National Association of Plant Breeders Annual Meeting.
 6.	**Paudel D**, Kannan B, Wang J, Altpeter F. 2015. Interspecific hybridization between pearl millet and napiergrass for biosafety and identification of QTLs for flowering time in napiergrass. Florida Genetics Symposium.
 7.	Hosseinali F, Kelly B, Manandhar R, **Paudel D**, Abidi N, Hequet EF. 2012. Variability of individual cotton fiber tensile properties within and between samples. Beltwide Cotton Conference.
