@@ -1,4 +1,4 @@
-#### Peer-reviewed journal articles (\*undergraduate student under my supervision):
+#### Peer-reviewed Journal Articles (\*undergraduate student under my supervision):
 
 1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S*, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. Frontiers in Microbiology.
 2.	Yang X, Song J, Todd J, Peng Z, **Paudel DR**, Luo Z, Ma X, You Q, Hanson E, Zhao Z, Zhao Y, Zhang J, Ming R, Wang J. 2019. Target enrichment sequencing of 307 germplasm accessions identified ancestry of ancient and modern hybrids and signatures of adaptation and selection in sugarcane (Saccharum spp.), a “sweet” crop with “bitter” genomes. Plant Biotechnology Journal: 1–11.
@@ -13,19 +13,19 @@
 11.	Dhakal P, **Paudel DR**, Baral DR. 2015. Inventory of non-timber forest products in western Nepal and strategies for sustainable management. International Journal of Environment 4: 130–139.
 12.	**Paudel DR**, Hequet EF, Abidi N. 2013. Evaluation of cotton fiber maturity measurements. Industrial Crops and Products 45: 435–441.
 
-#### Book chapters:
+#### Book Chapters:
 
 1. 	**Paudel D**, Dhakal S, Parajuli S, Adhikari L, Peng Z, You Q, Shahi D, Avci M, Makaju S, Kannan B. 2020. Use of quantitative trait loci to develop stress tolerance in plants. In Plant Life under Changing Environment. Elsevier. In Press.
 2. 	 Peng Z, **Paudel D**, Wang L, Luo Z, You Q, Wang J. 2020 Methods for target enrichment sequencing via probe capture in legumes. In Legume Genomics: Methods and Protocols (Methods in Molecular Biology). Springer.
 
-#### Extension publications: 
+#### Extension Publications: 
 
 1.	**Paudel D**. 2017. Rbiology: R tutorials for biologists. Available from: rbiology.github.io
 2.	**Paudel D**. 2010. Cultivation practice of Oyster Mushroom (Booklet - in Nepali). 2010. Youth Action Fund, Open Society Institute - Budapest.
 3.	**Paudel D**. 2009. Urban farming for food security. Agri-Transformation. Year 1. Volume 1. Hitkari Samiti. Rampur Campus. Nepal.
 4.	**Paudel D**. 2008. Azolla – a boon for farmers (In Nepali). Krishi Sandesh. Post Graduate Society, IAAS, Rampur, Nepal.
 
-####Conference and Workshop Talks:
+#### Conference and Workshop Talks:
 
 1.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2019. Breeding, genetics, and genomics of napiergrass (elephant grass, Cenchrus purpureus). NSA-UF Talk Series, University of Florida.
 2.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2018. Utilizing cytoplasmic male sterility and interspecific hybridization to reduce invasiveness of elephant grass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
