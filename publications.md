@@ -1,6 +1,6 @@
-#### Peer-reviewed journal articles:
+#### Peer-reviewed journal articles (\*undergraduate student under my supervision):
 
-1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. Frontiers in Microbiology.
+1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S*, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. Frontiers in Microbiology.
 2.	Yang X, Song J, Todd J, Peng Z, **Paudel DR**, Luo Z, Ma X, You Q, Hanson E, Zhao Z, Zhao Y, Zhang J, Ming R, Wang J. 2019. Target enrichment sequencing of 307 germplasm accessions identified ancestry of ancient and modern hybrids and signatures of adaptation and selection in sugarcane (Saccharum spp.), a “sweet” crop with “bitter” genomes. Plant Biotechnology Journal: 1–11.
 3.	**Paudel DR**, Kannan B, Yang X, Harris-Shultz KR, Thudi M, Varshney RK, Altpeter F, Wang J. 2018. Surveying the genome and constructing a high-density genetic map of napiergrass (Cenchrus purpureus Schumach). Scientific Reports 8: 1–11.
 4.	Varshney RK, Shi C, … [18 authors] … **Paudel DR**, … [42 authors] …, Vigouroux Y, Xu X. 2017. Pearl millet genome sequence provides a resource to improve agronomic traits in arid environments. Nature Biotechnology 35: 969–976.
@@ -24,7 +24,9 @@
 2.	**Paudel D**. 2010. Cultivation practice of Oyster Mushroom (Booklet - in Nepali). 2010. Youth Action Fund, Open Society Institute - Budapest.
 3.	**Paudel D**. 2009. Urban farming for food security. Agri-Transformation. Year 1. Volume 1. Hitkari Samiti. Rampur Campus. Nepal.
 4.	**Paudel D**. 2008. Azolla – a boon for farmers (In Nepali). Krishi Sandesh. Post Graduate Society, IAAS, Rampur, Nepal.
-Conference and Workshop Talks:
+
+####Conference and Workshop Talks:
+
 1.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2019. Breeding, genetics, and genomics of napiergrass (elephant grass, Cenchrus purpureus). NSA-UF Talk Series, University of Florida.
 2.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2018. Utilizing cytoplasmic male sterility and interspecific hybridization to reduce invasiveness of elephant grass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
 3.	**Paudel D**, Kannan B, Altpeter F, Wang J. 2017a. First genetic linkage map of napiergrass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
@@ -33,7 +35,7 @@ Conference and Workshop Talks:
 6.	**Paudel D**, Kelly B, Manandhar R, Hosseinali F, Abidi N, Hequet EF. 2012b. Quantifying sample size requirements for AFIS Short Fiber Content measurements. Beltwide Cotton Conference.
 7.	**Paudel D**, Timsina K. 2009. Utilizing azolla as an economical and sustainable feed to poultry. Global Future Institute Research Highlights, Rampur, Nepal.
 
-#### Conference and Workshop Posters (\*undergraduate student under my supervision)
+#### Conference and Workshop Posters 
 
 1.	**Paudel D**, Dareus R, Rios E. 2020. Genome wide association study reveals candidate genes for flowering time in cowpea. Plant Science Symposium, University of Florida.
 2.	**Paudel D**, de Bem Oliveira I, Kenworthy KE, Unruh B, Meeks M, Milla-Lewis SR, Wu Y, Schwartz BM, Zhang J, Munoz PR, Rios E. 2019. Multi-environment evaluation of turfgrass species for turf quality in drought. ASA, CSSA and SSSA International Annual Meetings.
@@ -45,36 +47,3 @@ Conference and Workshop Talks:
 8.	Kelly B, Manandhar R, Hosseinali F, **Paudel D**, Abidi N, Hequet EF. 2012. Decoding distributional changes in fiber quality during consecutive stages of processing. Beltwide Cotton Conference.
 9.	Manandhar R, Kelly B, Hosseinali F, **Paudel D**, Abidi N, Hequet EF. 2012. Relationship between individual fiber length and linear density within-sample. Beltwide Cotton Conference.
 10.	**Paudel D**, Kelly B, Manandhar R, Hosseinali F, Abidi N, Hequet EF. 2012. Assessing rapid measurements of the secondary cell wall development of cotton fibers. Second Annual Agricultural Consortium of Texas Research Symposium.
-
-
-
-
-
-
-#### Conference and Workshop Talks
-1.	**Paudel, D.**, B. Kannan, F. Altpeter, J. Wang. 2018. Utilizing cytoplasmic male sterility and interspecific hybridization to reduce invasiveness of elephant grass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
-2.	**Paudel, D.**, B. Kannan, F. Altpeter, J. Wang. 2017. Constructing high density genetic map of napiergrass (Cenchrus purpureus). ASA-CSSA-SSSA Annual Meeting, Tampa, Florida.
-3.	**Paudel, D.**, B. Kannan, F. Altpeter, J. Wang. 2017. First genetic linkage map of napiergrass (Cenchrus purpureus). Agronomy Graduate Research Symposium, University of Florida.
-4.	**Paudel, D.**, E. F. Hequet, N. Abidi, B. Kelly, R. Manandhar, and F. Hosseinali. 2012. Evaluation of various measurements for assessing maturity of cotton fibers. Texas Tech Annual Biological Sciences Symposium, Lubbock, 30-31 March.
-5.	**Paudel, D.**, E. F. Hequet, N. Abidi, B. Kelly, R. Manandhar, and F. Hosseinali. 2012. Quantifying sample size requirements for AFIS Short Fiber Content measurements. Selected Paper, Beltwide Cotton Conferences, Orlando, 3-6 January.
-6.	**Paudel, D.** and K. Timsina. 2009. Utilizing azolla as an economical and sustainable feed to poultry. Selected Paper, Global Future Institute Research Highlights, Rampur, Nepal, 3 July. 
-
-
-
-#### Conference and Workshop Posters (+undergraduate student under my supervision)
-1.	**Paudel, D.**, B. Kannan, X. Yang, F. Altpeter, and J. Wang. 2018. Constructing a high-density genetic map of napiergrass (Cenchrus purpureus Schumach). New Frontiers in Genetic Evaluation, Corteva Agriscience, Iowa.
-2.	Maya, S.+, **Paudel, D.**, J. Wang. 2017. Sequencing and annotating a Bradyrhizobium strain, Lb8. Undergraduate Research Symposium. University of Florida.
-3.	**Paudel, D.**, B. Kannan, J. Wang, and F. Altpeter. 2016. Developing marker assisted breeding resources in napiergrass and interspecific hybridization with pearl millet for improved biomass production and biosafety. National Association of Plant Breeders Annual Meeting, Raleigh, North Carolina.
-4.	**Paudel, D.**, B. Kannan, J. Wang, and F. Altpeter. 2015. Interspecific hybridization between pearl millet and napiergrass for biosafety and identification of QTLs for flowering time in napiergrass. Florida Genetics Symposium. Gainesville, Florida.
-5.	**Paudel, D.**, E. F. Hequet, N. Abidi, B. Kelly, R. Manandhar, and F. Hosseinali. 2012. Assessing rapid measurements of the secondary cell wall development of cotton fibers. Second Annual Agricultural Consortium of Texas Research Symposium, Lubbock, 4-6 April.
-6.	Kelly, B., E. F. Hequet, N. Abidi, R. Manandhar, F. Hosseinali, and **Paudel, D.** 2012. Decoding distributional changes in fiber quality during consecutive stages of processing. Beltwide Cotton Conferences, Orlando, 3-6 January.
-7.	Manandhar, R., E. F. Hequet, N. Abidi, B. Kelly, F. Hosseinali, and **Paudel, D.** 2012. Relationship between individual fiber length and linear density within-sample. Beltwide Cotton Conferences, Orlando, 3-6 January.
-8.	Hosseinali, F., E. F. Hequet, N. Abidi, B. Kelly, R. Manandhar, and **Paudel, D.** 2012. Variability of individual cotton fiber tensile properties within and between samples. Beltwide Cotton Conferences, Orlando, 3-6 January.
-
-
-
-#### Other articles (popular articles and non-peer reviewed publications):
-1. Jumla: A nurse’s story – English translation of ‘Khalangama Hamala’, a war memoir by Radha Paudel
-2. **Paudel, D.** Cultivation practice of Oyster Mushroom (Booklet - in Nepali). 2010. Youth Action Fund, Open Society Institute - Budapest.
-3. **Paudel, D.** 2009. Urban farming for food security. Agri-Transformation. 2009. Year 1. Volume 1. Hitkari Samiti. Rampur Campus. Nepal.
-4. **Paudel, D.** 2008. Azolla – a boon for farmers (In Nepali). Krishi Sandesh. 2008. Post Graduate Society, IAAS, Rampur, Nepal.
