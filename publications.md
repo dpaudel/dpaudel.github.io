@@ -1,6 +1,6 @@
 #### Peer-reviewed Journal Articles:
 
-1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S*, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. Frontiers in Microbiology.
+1.	**Paudel DR**, Liu F, Wang L, Crook M, Maya S*, Peng Z, Kelley K, Ane JM, Wang J. 2020. Isolation, characterization, and complete genome sequence of a Bradyrhizobium strain Lb8 from nodules of peanut utilizing crack entry infection. [Frontiers in Microbiology](https://www.frontiersin.org/articles/10.3389/fmicb.2020.00093).
 2.	Yang X, Song J, Todd J, Peng Z, **Paudel DR**, Luo Z, Ma X, You Q, Hanson E, Zhao Z, Zhao Y, Zhang J, Ming R, Wang J. 2019. Target enrichment sequencing of 307 germplasm accessions identified ancestry of ancient and modern hybrids and signatures of adaptation and selection in sugarcane (Saccharum spp.), a “sweet” crop with “bitter” genomes. Plant Biotechnology Journal: 1–11.
 3.	**Paudel DR**, Kannan B, Yang X, Harris-Shultz KR, Thudi M, Varshney RK, Altpeter F, Wang J. 2018. Surveying the genome and constructing a high-density genetic map of napiergrass (Cenchrus purpureus Schumach). Scientific Reports 8: 1–11.
 4.	Varshney RK, Shi C, … [18 authors] … **Paudel DR**, … [42 authors] …, Vigouroux Y, Xu X. 2017. Pearl millet genome sequence provides a resource to improve agronomic traits in arid environments. Nature Biotechnology 35: 969–976.
