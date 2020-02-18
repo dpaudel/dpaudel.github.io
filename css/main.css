@@ -114,7 +114,6 @@ img {
   {% if site.navbar-img %}
   background-image: url({{ site.navbar-img }});
   background-attachment: fixed;
-  background-position: center;
   {% endif %}
 }
 
