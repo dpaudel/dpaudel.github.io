@@ -318,13 +318,13 @@ footer .theme-by {
 /* --- Post preview --- */
 
 .post-preview {
-  padding: 16px 0;
+  padding: 5px 0;
   border-bottom: 1px solid #eee;
 }
 
 @media only screen and (min-width: 768px) {
   .post-preview {
-    padding: 35px 0;
+    padding: 5px 0;
   }
 }
 
@@ -344,21 +344,21 @@ footer .theme-by {
 }
 
 .post-preview .post-title {
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 0;
 }
 .post-preview .post-subtitle {
   margin: 0;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 50;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
   color: #808080;
-  font-size: 12px;
+  font-size: 8px;
   font-style: italic;
-  margin: 0 0 10px;
+  margin: 0 0 5px;
 }
 .post-preview .post-entry {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -372,8 +372,8 @@ footer .theme-by {
 }
 .post-image {
   float: right;
-  height: 192px;
-  width: 192px;
+  height: 150px;
+  width: 150px;
   margin-top: -35px;
   filter: grayscale(0%);
 }
@@ -382,11 +382,11 @@ footer .theme-by {
 }
 .post-image img {
   border-radius: 100px;
-  height: 192px;
-  width: 192px;
+  height: 150px;
+  width: 150px;
 }
 .post-preview .post-read-more {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 768px) {
@@ -400,8 +400,8 @@ footer .theme-by {
 .blog-tags {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999;
-  font-size: 15px;
-  margin-bottom: 30px;
+  font-size: 10px;
+  margin-bottom: 5px;
 }
 
 .blog-tags a {
