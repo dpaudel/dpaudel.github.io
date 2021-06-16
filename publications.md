@@ -24,9 +24,10 @@
 #### Extension Publications: 
 
 1.	**Paudel D**. 2017. Rbiology: R tutorials for biologists. Available from: [rbiology.github.io](https://rbiology.github.io/)
-2.	**Paudel D**. 2010. Cultivation practice of Oyster Mushroom (Booklet - in Nepali). 2010. Youth Action Fund, Open Society Institute - Budapest.
-3.	**Paudel D**. 2009. Urban farming for food security. Agri-Transformation. Year 1. Volume 1. Hitkari Samiti. Rampur Campus. Nepal.
-4.	**Paudel D**. 2008. Azolla – a boon for farmers (In Nepali). Krishi Sandesh. Post Graduate Society, IAAS, Rampur, Nepal.
+2.	**Paudel D**. 2017. Informational interview with Dr. Marcio Resende for Conviron Scholars Program. [YouTube](https://www.youtube.com/watch?v=Ow5YgIi7FA4)
+3.	**Paudel D**. 2010. Cultivation practice of Oyster Mushroom (Booklet - in Nepali). 2010. Youth Action Fund, Open Society Institute - Budapest.
+4.	**Paudel D**. 2009. Urban farming for food security. Agri-Transformation. Year 1. Volume 1. Hitkari Samiti. Rampur Campus. Nepal.
+5.	**Paudel D**. 2008. Azolla – a boon for farmers (In Nepali). Krishi Sandesh. Post Graduate Society, IAAS, Rampur, Nepal.
 
 #### Conference and Workshop Talks:
 1.	**Paudel D**, Wang L, Acharya J, de Souza C, Rios E, Wang J. 2020. Elucidating the effects of organic vs conventional cropping practice and rhizobia inoculation on peanut yield and rhizosphere microbial diversity. NAPA Conference 2020. Virtual.
