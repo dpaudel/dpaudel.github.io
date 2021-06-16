@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Genome-Wide Association Study Reveals Candidate Genes for Flowering Time in Cowpea (*Vigna unguiculata* [L.] Walp.)
+title: Genome-Wide Association Study Reveals Candidate Genes for Flowering Time in Cowpea (Vigna unguiculata [L.] Walp.)
 subtitle: Dev Paudel, Rocheteau Dareus, Julia Rosenwald, María Muñoz-Amatriaín, and Esteban F. Rios
 image: /img/cowpea.jpg
 tags: [GWAS, legume, breeding, SNP, gene]
