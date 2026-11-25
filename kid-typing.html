@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ABC 123 Fun!</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+  html, body {
+    margin: 0; height: 100%; overflow: hidden;
+    user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+    touch-action: none; overscroll-behavior: none; -webkit-tap-highlight-color: transparent;
+    font-family: "Chalkboard SE", "Comic Sans MS", ui-rounded, "Arial Rounded MT Bold", sans-serif;
+  }
+  body {
+    background: linear-gradient(135deg, #ffd6e8, #c9f0ff);
+    transition: background 0.8s ease;
+  }
+  body.playing { cursor: none; }
+
+  /* drifting clouds */
+  .cloud { position: absolute; font-size: 14vh; opacity: .85; pointer-events: none; animation: drift linear infinite; }
+  @keyframes drift { from { transform: translateX(-25vw); } to { transform: translateX(125vw); } }
+
+  #fx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+
+  #stage {
+    position: fixed; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; z-index: 3; pointer-events: none;
+    padding-bottom: 10vh; box-sizing: border-box;
+  }
+  #letter {
+    font-size: min(34vh, 40vw); font-weight: bold; line-height: 1;
+    color: #ff4f8b; -webkit-text-stroke: .5vh #fff;
+    text-shadow: 0 1.2vh 0 rgba(0,0,0,.15), 0 0 4vh rgba(255,255,255,.8);
+  }
+  #letter small { font-size: .55em; margin-left: .15em; opacity: .9; }
+  #hero { font-size: 22vh; line-height: 1.1; min-height: 1.1em; display: flex; flex-wrap: wrap; justify-content: center; max-width: 90vw; }
+  #hero.many { font-size: 12vh; }
+  #hero span { display: inline-block; }
+  #word {
+    font-size: min(8vh, 9vw); font-weight: bold; color: #fff; margin-top: 1vh; text-align: center;
+    background: rgba(0,0,0,.18); padding: .5vh 4vh; border-radius: 6vh;
+    text-shadow: 0 .4vh 0 rgba(0,0,0,.25);
+  }
+  #word:empty { display: none; }
+  .hl { color: #ffe14d; font-size: 1.15em; }
+
+  .pop { animation: pop .35s cubic-bezier(.2,1.6,.4,1) both; }
+  @keyframes pop {
+    0% { transform: scale(0) rotate(-25deg); opacity: 0; }
+    60% { transform: scale(1.2) rotate(8deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0); }
+  }
+  .bounce { animation: bounce .7s ease-in-out .35s infinite; }
+  @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3vh) rotate(-4deg); } }
+  .wiggle { animation: wiggle .8s ease-in-out .35s infinite; }
+  @keyframes wiggle { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg) scale(1.05); } }
+
+  .floaty {
+    position: fixed; font-size: 11vh; pointer-events: none; z-index: 2;
+    animation: floaty 9s ease-out forwards;
+  }
+  .floaty.gone { filter: opacity(0); transition: filter .4s; }
+  @keyframes floaty {
+    0%   { transform: translateY(6vh) scale(0) rotate(0); opacity: 0; }
+    15%  { transform: translateY(0) scale(1.15) rotate(var(--r)); opacity: 1; }
+    75%  { opacity: 1; }
+    100% { transform: translate(var(--dx), -35vh) scale(.8) rotate(calc(var(--r) * -1)); opacity: 0; }
+  }
+
+  #trail {
+    position: fixed; left: 0; right: 0; bottom: 2.5vh; display: flex; justify-content: center;
+    gap: 1vh; z-index: 4; pointer-events: none;
+  }
+  #trail span {
+    width: 7vh; height: 7vh; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 4.5vh; font-weight: bold; color: #fff; box-shadow: 0 .6vh 0 rgba(0,0,0,.15);
+    animation: pop .25s cubic-bezier(.2,1.6,.4,1) both;
+  }
+
+  #stars { position: fixed; top: 2vh; right: 3vh; font-size: 5vh; z-index: 4; color: #fff;
+    text-shadow: 0 .4vh 0 rgba(0,0,0,.2); pointer-events: none; }
+
+  #banner {
+    position: fixed; top: 8vh; left: 50%; transform: translateX(-50%); z-index: 6;
+    font-size: min(9vh, 8vw); font-weight: bold; color: #fff; white-space: nowrap; pointer-events: none;
+    background: linear-gradient(90deg,#ff6b6b,#ffb84d,#5ad17a,#4db8ff,#b07cff);
+    padding: 1vh 5vh; border-radius: 8vh; box-shadow: 0 1vh 0 rgba(0,0,0,.15);
+    opacity: 0;
+  }
+  #banner.show { animation: banner 2.6s ease both; }
+  @keyframes banner {
+    0% { opacity: 0; transform: translateX(-50%) scale(.2); }
+    15% { opacity: 1; transform: translateX(-50%) scale(1.15); }
+    25%,80% { opacity: 1; transform: translateX(-50%) scale(1); }
+    100% { opacity: 0; transform: translateX(-50%) scale(.8) translateY(-5vh); }
+  }
+
+  #hint {
+    position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 3;
+    font-size: 8vh; color: #fff; text-align: center; pointer-events: none; opacity: 0; transition: opacity .6s;
+    text-shadow: 0 .5vh 0 rgba(0,0,0,.2);
+  }
+  #hint.show { opacity: 1; }
+  #hint div { font-size: 20vh; animation: bounce 1s ease-in-out infinite; }
+
+  #start {
+    position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4,#a1c4fd,#c2e9fb);
+    cursor: pointer;
+  }
+  #start h1 { font-size: min(13vh, 14vw); margin: 0; color: #fff; -webkit-text-stroke: .3vh #ff4f8b;
+    text-shadow: 0 1vh 0 rgba(0,0,0,.15); }
+  #start .faces { font-size: 12vh; margin: 2vh 0; }
+  #start .faces span { display: inline-block; animation: bounce 1.2s ease-in-out infinite; }
+  #go {
+    font: inherit; font-size: min(7vh, 8vw); font-weight: bold; color: #fff; border: none; cursor: pointer;
+    background: #ff4f8b; padding: 2vh 7vh; border-radius: 8vh; box-shadow: 0 1.2vh 0 #c2185b;
+    animation: wiggle 1.6s ease-in-out infinite;
+  }
+  #start p { font-size: 2.4vh; color: #333; margin-top: 5vh; background: rgba(255,255,255,.7);
+    padding: 1.5vh 3vh; border-radius: 2vh; max-width: 70vw; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<canvas id="fx"></canvas>
+<div id="stage">
+  <div id="letter"></div>
+  <div id="hero"></div>
+  <div id="word"></div>
+</div>
+<div id="hint"><div>⌨️</div><span id="hintText">Press a letter or number!</span></div>
+<div id="banner"></div>
+<div id="stars"></div>
+<div id="trail"></div>
+
+<div id="start">
+  <h1>ABC 123 Fun!</h1>
+  <div class="faces">
+    <span style="animation-delay:0s">🐶</span><span style="animation-delay:.15s">🦄</span><span style="animation-delay:.3s">🐸</span><span style="animation-delay:.45s">🚀</span><span style="animation-delay:.6s">🍓</span>
+  </div>
+  <button id="go">▶ Let's Play!</button>
+  <p><b>Grown-ups:</b> click the button (or press any key) to go full screen.<br>
+     Only A–Z and 0–9 work. To quit: <b>⌘ Q</b> on Mac, <b>Alt + F4</b> on Windows.<br>On a phone or tablet, every tap shows a new letter.</p>
+</div>
+
+<script>
+/* ------------------------------------------------------------------ data */
+const LETTERS = {
+  A: ['ay', [['🍎','Apple'],['🐊','Alligator'],['✈️','Airplane'],['🐜','Ant'],['🥑','Avocado'],['🚑','Ambulance'],['👽','Alien'],['⚓','Anchor'],['🧑‍🚀','Astronaut']]],
+  B: ['bee', [['🐻','Bear'],['🍌','Banana'],['🦋','Butterfly'],['🏀','Ball'],['🐝','Bee'],['🚌','Bus'],['🎈','Balloon'],['🐦','Bird'],['🍞','Bread'],['📚','Books']]],
+  C: ['see', [['🐱','Cat'],['🚗','Car'],['🎂','Cake'],['🥕','Carrot'],['🐄','Cow'],['🦀','Crab'],['🍪','Cookie'],['🌽','Corn'],['🏰','Castle'],['🤡','Clown']]],
+  D: ['dee', [['🐶','Dog'],['🦕','Dinosaur'],['🦆','Duck'],['🍩','Donut'],['🐬','Dolphin'],['🥁','Drum'],['🦌','Deer'],['🐉','Dragon'],['🚪','Door']]],
+  E: ['ee', [['🐘','Elephant'],['🥚','Egg'],['🦅','Eagle'],['🌍','Earth'],['👀','Eyes'],['👂','Ear'],['✉️','Envelope'],['🛗','Elevator']]],
+  F: ['eff', [['🐸','Frog'],['🐟','Fish'],['🌸','Flower'],['🚒','Fire truck'],['🦊','Fox'],['🦩','Flamingo'],['🍟','French fries'],['🪶','Feather'],['🦶','Foot']]],
+  G: ['jee', [['🦒','Giraffe'],['🍇','Grapes'],['🦍','Gorilla'],['🎸','Guitar'],['🐐','Goat'],['🎁','Gift'],['👻','Ghost'],['🌎','Globe'],['🧤','Gloves']]],
+  H: ['aitch', [['🐴','Horse'],['🏠','House'],['🎩','Hat'],['❤️','Heart'],['🚁','Helicopter'],['🦔','Hedgehog'],['🍯','Honey'],['🔨','Hammer'],['🐹','Hamster']]],
+  I: ['eye', [['🍦','Ice cream'],['🧊','Ice'],['🏝️','Island'],['🐛','Insect'],['🦎','Iguana'],['⛸️','Ice skate'],['💡','Idea'],['🧭','Instrument']]],
+  J: ['jay', [['🧃','Juice'],['🎃','Jack-o-lantern'],['🚙','Jeep'],['🤹','Juggler'],['🪼','Jellyfish'],['🫙','Jar'],['🧥','Jacket'],['💎','Jewel'],['🐆','Jaguar']]],
+  K: ['kay', [['🦘','Kangaroo'],['🪁','Kite'],['🔑','Key'],['🐨','Koala'],['🥝','Kiwi'],['👑','King'],['🐈','Kitten'],['🫖','Kettle'],['🥋','Karate']]],
+  L: ['el', [['🦁','Lion'],['🍋','Lemon'],['🐞','Ladybug'],['🍃','Leaf'],['🍭','Lollipop'],['🦙','Llama'],['🦞','Lobster'],['💡','Light bulb'],['🪜','Ladder'],['🦎','Lizard']]],
+  M: ['em', [['🐵','Monkey'],['🌙','Moon'],['🐭','Mouse'],['🍄','Mushroom'],['🥭','Mango'],['🥛','Milk'],['🧲','Magnet'],['🏍️','Motorcycle'],['🍈','Melon']]],
+  N: ['en', [['🪺','Nest'],['👃','Nose'],['🥜','Nut'],['🌃','Night'],['🍜','Noodles'],['📰','Newspaper'],['🥷','Ninja'],['9️⃣','Nine']]],
+  O: ['oh', [['🐙','Octopus'],['🍊','Orange'],['🦉','Owl'],['🧅','Onion'],['🌊','Ocean'],['🦦','Otter'],['🫒','Olive'],['🦧','Orangutan'],['🦪','Oyster']]],
+  P: ['pee', [['🐧','Penguin'],['🐷','Pig'],['🍕','Pizza'],['🐼','Panda'],['🦜','Parrot'],['🍍','Pineapple'],['🥞','Pancakes'],['🎹','Piano'],['🍐','Pear'],['🍿','Popcorn']]],
+  Q: ['cue', [['👸','Queen'],['❓','Question'],['🤫','Quiet'],['🪙','Quarter'],['🦆','Quack','Quack quack! Q is for quack!'],['🏃','Quick'],['🛏️','Quilt']]],
+  R: ['ar', [['🐰','Rabbit'],['🌈','Rainbow'],['🚀','Rocket'],['🤖','Robot'],['🌹','Rose'],['🦏','Rhinoceros'],['💍','Ring'],['🌧️','Rain'],['🐓','Rooster'],['🦝','Raccoon']]],
+  S: ['ess', [['☀️','Sun'],['🐍','Snake'],['⭐','Star'],['🍓','Strawberry'],['⛄','Snowman'],['🦈','Shark'],['🐌','Snail'],['🧦','Socks'],['🕷️','Spider'],['🛝','Slide']]],
+  T: ['tee', [['🐯','Tiger'],['🚂','Train'],['🐢','Turtle'],['🌳','Tree'],['🍅','Tomato'],['🦃','Turkey'],['🚜','Tractor'],['🦷','Tooth'],['🧸','Teddy bear'],['🌮','Taco']]],
+  U: ['you', [['☂️','Umbrella'],['🦄','Unicorn'],['🛸','U F O'],['⬆️','Up'],['🙃','Upside down'],['🩲','Underwear'],['🦺','Uniform']]],
+  V: ['vee', [['🌋','Volcano'],['🎻','Violin'],['🚐','Van'],['🥦','Vegetables'],['🏐','Volleyball'],['🦺','Vest'],['🏺','Vase'],['💜','Violet'],['✌️','Victory']]],
+  W: ['double you', [['🐳','Whale'],['🍉','Watermelon'],['🐺','Wolf'],['⌚','Watch'],['🌊','Wave'],['🪱','Worm'],['🧙','Wizard'],['🪟','Window'],['🛞','Wheel']]],
+  X: ['ex', [['🩻','X-ray'],['❌','X','X marks the spot!'],['🎵','Xylophone','Xylophone! Ding ding ding!'],['🦊','Fox','Fox ends with ex!'],['📦','Box','Box ends with ex!'],['🦖','T-Rex','T-Rex ends with ex!'],['🎷','Saxophone','Saxophone has an ex!'],['6️⃣','Six','Six ends with ex!']]],
+  Y: ['why', [['🪀','Yo-yo'],['🐃','Yak'],['🧶','Yarn'],['💛','Yellow'],['🍠','Yam'],['🥱','Yawn'],['⛵','Yacht'],['🍳','Yolk'],['😋','Yummy']]],
+  Z: ['zee', [['🦓','Zebra'],['⚡','Zap'],['🥒','Zucchini'],['😴','Zzz','Zee zee zee... sleepy!'],['0️⃣','Zero'],['🤐','Zipper'],['🦁','Zoo'],['🏁','Zoom','Zoom zoom! Zee is for zoom!']]],
+};
+const NUM_WORDS = ['Zero','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+const NUMBERS = {
+  1: ['🌞','sun','suns'],      2: ['🐧','penguin','penguins'], 3: ['🐱','cat','cats'],
+  4: ['🍓','strawberry','strawberries'], 5: ['⭐','star','stars'], 6: ['🐟','fish','fish'],
+  7: ['🎈','balloon','balloons'], 8: ['🦆','duck','ducks'], 9: ['🍎','apple','apples'],
+};
+
+/* ------------------------------------------------------------------ elements */
+const $ = id => document.getElementById(id);
+const letterEl = $('letter'), heroEl = $('hero'), wordEl = $('word'),
+      trailEl = $('trail'), bannerEl = $('banner'), hintEl = $('hint'),
+      starsEl = $('stars'), startEl = $('start');
+let started = false, count = 0, lastPress = 0, idleTimer = null, countTimers = [];
+const lastPick = {};   // last item shown per key, so a repeat press never shows the same one
+
+/* ------------------------------------------------------------------ sound */
+let ac = null;
+function audio() {
+  if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
+  if (ac && ac.state === 'suspended') ac.resume();
+  return ac;
+}
+function note(freq, when = 0, dur = 0.6, vol = 0.25) {   // little xylophone "ding"
+  const a = audio(); if (!a) return;
+  const t = a.currentTime + when;
+  [1, 4].forEach((mult, i) => {
+    const o = a.createOscillator(), g = a.createGain();
+    o.type = i ? 'sine' : 'triangle';
+    o.frequency.value = freq * mult;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol / (i ? 4 : 1), t + 0.01);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur / (i ? 3 : 1));
+    o.connect(g).connect(a.destination);
+    o.start(t); o.stop(t + dur);
+  });
+}
+function boing() {
+  const a = audio(); if (!a) return;
+  const t = a.currentTime, o = a.createOscillator(), g = a.createGain();
+  o.type = 'sine';
+  o.frequency.setValueAtTime(220, t);
+  o.frequency.exponentialRampToValueAtTime(880, t + 0.15);
+  g.gain.setValueAtTime(0.15, t);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + 0.25);
+  o.connect(g).connect(a.destination); o.start(t); o.stop(t + 0.3);
+}
+const PENTA = [261.63, 293.66, 329.63, 392.0, 440.0];      // C D E G A
+function freqFor(i) { return PENTA[i % 5] * Math.pow(2, Math.floor(i / 5) % 3); }
+function fanfare() { [0, 2, 4, 7, 9].forEach((s, i) => note(freqFor(s + 5), i * 0.12, 0.5, 0.2)); }
+
+/* ------------------------------------------------------------------ voice */
+let voice = null;
+function pickVoice() {
+  const vs = speechSynthesis.getVoices();
+  // Prefer a child voice if the computer has one (macOS "Junior"/"Princess"); otherwise a
+  // clear voice pitched up high so it sounds kid-like.
+  voice = vs.find(v => /^(Junior|Princess)\b/.test(v.name)) ||
+          vs.find(v => /Samantha|Karen|Moira|Tessa|Google US English/.test(v.name)) ||
+          vs.find(v => v.lang && v.lang.startsWith('en')) || null;
+}
+if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function say(text, cancel = true) {
+  if (!('speechSynthesis' in window)) return;
+  if (cancel) speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  if (voice) u.voice = voice;
+  u.rate = 0.85; u.volume = 1;
+  u.pitch = voice && /^(Junior|Princess)\b/.test(voice.name) ? 1.3 : 1.8;   // high pitch = kid-like
+  speechSynthesis.speak(u);
+}
+
+/* ------------------------------------------------------------------ confetti */
+const cv = $('fx'), cx = cv.getContext('2d');
+let parts = [];
+function resize() {
+  const d = window.devicePixelRatio || 1;
+  cv.width = innerWidth * d; cv.height = innerHeight * d;
+  cx.setTransform(d, 0, 0, d, 0, 0);
+}
+addEventListener('resize', resize); resize();
+function burst(x, y, n, hue) {
+  for (let i = 0; i < n; i++) {
+    const ang = Math.random() * Math.PI * 2, sp = 4 + Math.random() * 12;
+    parts.push({ x, y, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp - 6,
+      s: 6 + Math.random() * 10, c: `hsl(${(hue + Math.random() * 140) % 360},95%,60%)`,
+      life: 1, rot: Math.random() * 6, vr: (Math.random() - .5) * .4, round: Math.random() < .4 });
+  }
+}
+function rain(n) {
+  for (let i = 0; i < n; i++)
+    parts.push({ x: Math.random() * innerWidth, y: -20 - Math.random() * innerHeight * .5,
+      vx: (Math.random() - .5) * 2, vy: 2 + Math.random() * 3, s: 8 + Math.random() * 10,
+      c: `hsl(${Math.random() * 360},95%,60%)`, life: 1.6, rot: 0, vr: (Math.random() - .5) * .3, round: false });
+}
+(function tick() {
+  cx.clearRect(0, 0, innerWidth, innerHeight);
+  parts = parts.filter(p => p.life > 0 && p.y < innerHeight + 40);
+  for (const p of parts) {
+    p.vy += 0.25; p.vx *= 0.985; p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.life -= 0.008;
+    cx.save(); cx.globalAlpha = Math.min(1, p.life); cx.translate(p.x, p.y); cx.rotate(p.rot);
+    cx.fillStyle = p.c;
+    if (p.round) { cx.beginPath(); cx.arc(0, 0, p.s / 2, 0, 7); cx.fill(); }
+    else cx.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2);
+    cx.restore();
+  }
+  requestAnimationFrame(tick);
+})();
+
+/* ------------------------------------------------------------------ helpers */
+function restart(el, cls) { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+function highlight(word, ch) {
+  return word.replace(new RegExp(ch, 'gi'), m => `<span class="hl">${m}</span>`);
+}
+let floatyTimers = [];
+function floaty(emoji, delay = 0) {
+  floatyTimers.push(setTimeout(() => {
+    const f = document.createElement('div');
+    f.className = 'floaty'; f.textContent = emoji;
+    // keep floaties around the edges, away from the big letter in the middle
+    const side = Math.random() < .5;
+    const x = side ? Math.random() * 22 + 2 : Math.random() * 22 + 70;
+    f.style.left = x + 'vw';
+    f.style.top = (Math.random() * 55 + 25) + 'vh';
+    f.style.setProperty('--r', ((Math.random() - .5) * 60) + 'deg');
+    f.style.setProperty('--dx', ((Math.random() - .5) * 20) + 'vw');
+    document.body.appendChild(f);
+    setTimeout(() => f.remove(), 9100);
+  }, delay));
+}
+function newColors() {
+  const h = Math.floor(Math.random() * 360);
+  document.body.style.background =
+    `linear-gradient(135deg, hsl(${h},95%,78%), hsl(${(h + 50) % 360},90%,72%), hsl(${(h + 110) % 360},85%,75%))`;
+  letterEl.style.color = `hsl(${(h + 200) % 360},85%,50%)`;
+  return h;
+}
+function addTrail(ch, h) {
+  const s = document.createElement('span');
+  s.textContent = ch;
+  s.style.background = `hsl(${(h + 200) % 360},80%,55%)`;
+  trailEl.appendChild(s);
+  while (trailEl.children.length > 12) trailEl.firstChild.remove();
+}
+function resetIdle() {
+  hintEl.classList.remove('show');
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => hintEl.classList.add('show'), 12000);
+}
+
+/* ------------------------------------------------------------------ show a key */
+function showLetter(ch, idx) {
+  const [name, items] = LETTERS[ch];
+  let i;
+  do { i = Math.floor(Math.random() * items.length); } while (i === lastPick[ch] && items.length > 1);
+  lastPick[ch] = i;
+  const [emoji, word, phrase] = items[i];
+
+  letterEl.innerHTML = `${ch}<small>${ch.toLowerCase()}</small>`;
+  heroEl.className = ''; heroEl.innerHTML = `<span>${emoji}</span>`;
+  wordEl.innerHTML = highlight(word, ch);
+  restart(letterEl, 'pop'); restart(heroEl.firstChild, 'pop');
+  heroEl.firstChild.classList.add(Math.random() < .5 ? 'bounce' : 'wiggle');
+  restart(wordEl, 'pop');
+
+  note(freqFor(idx)); boing();
+  const others = items.filter((_, j) => j !== i).sort(() => Math.random() - .5).slice(0, 4);
+  others.forEach((it, j) => floaty(it[0], 80 + j * 100));
+  floaty(emoji, 500);
+  setTimeout(() => say(phrase || `${name} is for ${word}`), 200);
+}
+
+function showNumber(ch) {
+  const n = +ch, w = NUM_WORDS[n];
+  letterEl.textContent = ch;
+  restart(letterEl, 'pop');
+  countTimers.forEach(clearTimeout); countTimers = [];
+
+  if (n === 0) {
+    heroEl.className = ''; heroEl.innerHTML = '<span>📦</span>';
+    restart(heroEl.firstChild, 'pop'); heroEl.firstChild.classList.add('wiggle');
+    wordEl.innerHTML = 'Zero — empty box!';
+    restart(wordEl, 'pop');
+    note(freqFor(0)); boing();
+    setTimeout(() => say('Zero! Zero means nothing at all! The box is empty!'), 200);
+    return;
+  }
+  const [emoji, one, many] = NUMBERS[n];
+  heroEl.className = n > 4 ? 'many' : '';
+  heroEl.innerHTML = '';
+  wordEl.innerHTML = `${w} ${n === 1 ? one : many}`;
+  restart(wordEl, 'pop');
+  // pop the objects in one at a time, with a rising note each — counting!
+  for (let k = 0; k < n; k++) {
+    countTimers.push(setTimeout(() => {
+      const s = document.createElement('span');
+      s.textContent = emoji; s.className = 'pop';
+      heroEl.appendChild(s);
+      note(freqFor(k + 3), 0, 0.4, 0.2);
+    }, 200 + k * 280));
+  }
+  const counting = NUM_WORDS.slice(1, n + 1).join(', ').toLowerCase();
+  setTimeout(() => say(n === 1 ? `One! One ${one}!` : `${w}! ${counting}. ${w} ${many}!`), 150);
+}
+
+function press(ch) {
+  const now = performance.now();
+  if (now - lastPress < 180) return;           // gentle limit on key-mashing
+  lastPress = now;
+  resetIdle();
+  // clear the previous letter's flying objects so only this letter's things are on screen
+  floatyTimers.forEach(clearTimeout); floatyTimers = [];
+  document.querySelectorAll('.floaty:not(.gone)').forEach(f => { f.classList.add('gone'); setTimeout(() => f.remove(), 400); });
+  const h = newColors();
+  const idx = /[A-Z]/.test(ch) ? ch.charCodeAt(0) - 65 : +ch;
+
+  if (LETTERS[ch]) showLetter(ch, idx); else showNumber(ch);
+
+  const r = letterEl.getBoundingClientRect();
+  burst(r.left + r.width / 2, r.top + r.height / 2, 70, h);
+  addTrail(ch, h);
+
+  count++;
+  starsEl.textContent = '⭐ ' + count;
+  if (count % 10 === 0) celebrate();
+}
+
+function celebrate() {
+  const cheers = ['Great job!', 'Super star!', 'You did it!', 'Awesome!', 'Hooray!', 'Amazing!'];
+  const c = cheers[Math.floor(Math.random() * cheers.length)];
+  bannerEl.textContent = `🎉 ${c} 🎉`;
+  restart(bannerEl, 'show');
+  setTimeout(() => { fanfare(); rain(160); say(c, false); }, 700);
+  ['⭐','🌟','🎈','🎉','✨','🥳'].forEach((e, i) => floaty(e, 800 + i * 120));
+}
+
+/* ------------------------------------------------------------------ full screen + key lock */
+// Every key the page should swallow while full screen — Q is deliberately left
+// out so ⌘Q always reaches the browser and quits.
+const LOCK_KEYS = ['Escape', 'Tab', 'Space', 'Backquote', 'F11',
+  ...'ABCDEFGHIJKLMNOPRSTUVWXYZ'.split('').map(c => 'Key' + c),
+  ...'0123456789'.split('').map(d => 'Digit' + d)];
+
+function goFullscreen() {
+  const el = document.documentElement;
+  if (document.fullscreenElement || document.webkitFullscreenElement) return;
+  const req = el.requestFullscreen ? el.requestFullscreen({ navigationUI: 'hide' })
+            : el.webkitRequestFullscreen ? el.webkitRequestFullscreen() : null;
+  Promise.resolve(req).then(() => {
+    if (navigator.keyboard && navigator.keyboard.lock) navigator.keyboard.lock(LOCK_KEYS).catch(() => {});
+  }).catch(() => {});
+}
+
+function start() {
+  if (started) return;
+  started = true;
+  audio(); goFullscreen();
+  startEl.remove();
+  document.body.classList.add('playing');
+  fanfare(); rain(120);
+  say("Let's play! Press a letter or a number!");
+  resetIdle();
+}
+$('go').addEventListener('click', e => { e.stopPropagation(); start(); });
+startEl.addEventListener('click', start);
+
+/* ------------------------------------------------------------------ input handling */
+function keyChar(e) {
+  const c = e.code || '';
+  if (/^Key[A-Z]$/.test(c)) return c.slice(3);
+  if (/^(Digit|Numpad)[0-9]$/.test(c)) return c.slice(-1);
+  return null;
+}
+document.addEventListener('keydown', e => {
+  // Let ⌘Q through so a grown-up can always quit.
+  if (e.metaKey && (e.code === 'KeyQ' || e.key === 'q' || e.key === 'Q')) return;
+  // Let Alt+F4 through so a grown-up can always close the window on Windows.
+  if (e.altKey && e.code === 'F4') return;
+  e.preventDefault(); e.stopPropagation();
+  if (!started) { start(); return; }
+  goFullscreen();                                    // pops back to full screen if it was exited
+  if (e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
+  const ch = keyChar(e);
+  if (ch) press(ch);
+}, true);
+['keyup', 'keypress'].forEach(t => document.addEventListener(t, e => {
+  if ((e.metaKey && e.code === 'KeyQ') || (e.altKey && e.code === 'F4')) return;
+  e.preventDefault();
+}, true));
+
+// Phone/tablet: every tap shows a new random letter. Mouse clicks just make a confetti pop.
+const isTouch = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+if (isTouch) $('hintText').textContent = 'Tap the screen!';
+let lastTapLetter = null;
+document.addEventListener('pointerdown', e => {
+  if (!started) return;
+  e.preventDefault(); goFullscreen();
+  if (e.pointerType === 'touch' || e.pointerType === 'pen') {
+    const keys = Object.keys(LETTERS);
+    let ch;
+    do { ch = keys[Math.floor(Math.random() * keys.length)]; } while (ch === lastTapLetter);
+    lastTapLetter = ch;
+    press(ch);
+    burst(e.clientX, e.clientY, 30, Math.random() * 360);
+  } else {
+    burst(e.clientX, e.clientY, 30, Math.random() * 360); note(freqFor(Math.floor(Math.random() * 10)), 0, .3, .15);
+  }
+});
+['contextmenu', 'dragstart', 'selectstart', 'gesturestart', 'gesturechange'].forEach(t =>
+  document.addEventListener(t, e => e.preventDefault()));
+document.addEventListener('wheel', e => { if (e.ctrlKey || e.metaKey) e.preventDefault(); }, { passive: false });
+document.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+
+/* ------------------------------------------------------------------ clouds */
+['☁️', '☁️', '☁️', '🌈'].forEach((c, i) => {
+  const d = document.createElement('div');
+  d.className = 'cloud'; d.textContent = c;
+  d.style.top = (5 + i * 18) + 'vh';
+  d.style.animationDuration = (40 + i * 15) + 's';
+  d.style.animationDelay = (-i * 12) + 's';
+  document.body.appendChild(d);
+});
+</script>
+</body>
+</html>
